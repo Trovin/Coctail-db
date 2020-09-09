@@ -1,0 +1,15 @@
+<aside class="sidebar">
+  <form [formGroup]="categoriesForm" novalidate (ngSubmit)="onSubmit()">
+    <div formArrayName="categories">
+      <div *ngFor="let company of formCategories['controls']; let i = index" class="sidebar-item">
+        <div [formGroupName]="i" class="checkbox">
+          <input formControlName="value" class="form-control" type="checkbox" [id]="i">
+          <label [for]="i">
+            <span>{{company.value['category']}}</span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <button mat-raised-button>Apply</button>
+  </form>
+</aside>

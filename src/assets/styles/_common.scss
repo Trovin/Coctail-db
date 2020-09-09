@@ -1,0 +1,109 @@
+@import 'variables';
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.fade-in {
+  animation: fadeIn $transition linear;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.checkbox {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  display: block;
+
+  label {
+    position: relative;
+    min-height: 25px;
+    display: block;
+    padding-left: 35px;
+    margin-bottom: 0;
+    font-weight: normal;
+    cursor: pointer;
+
+    span {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      margin: 4px;
+      width: 15px;
+      height: 15px;
+      transition: transform 0.28s ease;
+      border-radius: 3px;
+      border: 2px solid $theme;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      width: 6px;
+      height: 5px;
+      border-bottom: 2px solid $theme;
+      border-left: 2px solid $theme;
+      transform: rotate(-45deg) scale(0);
+      transition: transform ease 0.25s;
+      position: absolute;
+      top: 8px;
+      left: 10px;
+    }
+  }
+
+  input[type="checkbox"] {
+    width: auto;
+    opacity: 0.00000001;
+    position: absolute;
+    left: 0;
+    margin-left: -20px;
+    &:checked ~ label{
+      &:before {
+        border: 2px solid $theme;
+      }
+      &:after {
+        transform: rotate(-45deg) scale(1);
+      }
+    }
+    &:focus + label::before {
+      outline: 0;
+    }
+  }
+}
+
+button.mat-raised-button {
+  width: 100%;
+  max-width: 180px;
+  margin: 0 auto;
+  padding: 10px;
+  color: $white-color;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 19px;
+  background: $button;
+  border-radius: 10px;
+
+  &:hover {
+    opacity: .9;
+  }
+}

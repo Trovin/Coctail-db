@@ -1,0 +1,19 @@
+@import 'variables';
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 8px;
+  background: $white-color;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.headline {
+  display: inline-block;
+  font-size: 30px;
+  line-height: 41px;
+  margin-right: 25px;
+  letter-spacing: 0.51em;
+  color: $headline;
+}

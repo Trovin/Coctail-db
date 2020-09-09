@@ -1,0 +1,58 @@
+@import 'variables';
+
+/* stylelint-disable */
+
+@font-face {
+  font-family: 'SeaweedScript-Regular';
+  src: url('~assets/fonts/seaweedScript/SeaweedScript-Regular.eot'); /* IE9 Compat Modes */
+  src: url('~assets/fonts/seaweedScript/SeaweedScript-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('~assets/fonts/seaweedScript/SeaweedScript-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+  url('~assets/fonts/seaweedScript/SeaweedScript-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+  url('~assets/fonts/seaweedScript/SeaweedScript-Regular.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+/* stylelint-enable */
+
+* {
+  box-sizing: border-box;
+  font-family: $base-fonts;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 34px;
+  font-family: $decor-fonts;
+}
+
+h2 {
+  font-size: 22px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+h5 {
+  font-size: 16px;
+}
+
+h6 {
+  font-size: 14px;
+}
+
+p {
+  font-size: 16px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
