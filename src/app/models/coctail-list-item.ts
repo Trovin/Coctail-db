@@ -1,7 +1,6 @@
 export class CoctailListItem {
   idDrink: string;
   strDrink: string;
-  category?: string;
   strDrinkThumb: string;
 
   constructor(data) {

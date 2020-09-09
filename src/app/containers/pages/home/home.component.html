@@ -1,16 +1,21 @@
 <section class="home">
 
-  <div class="content" *ngFor="let list of lists">
-    <h2 class="content-headline">{{list.category}}</h2>
+  <div class="container">
+    <cdk-virtual-scroll-viewport
+      (scrolledIndexChange)="onScroll($event)"
+      [itemSize]="searchResults.length - 1" class="row">
 
-    <div class="row">
-      <div
-        class="content-item fade-in"
-        *ngFor="let item of list.items; let i = index">
-        <img [src]="item.strDrinkThumb" class="content-image" [alt]="item.strDrink">
-        <p class="content-info">{{item.strDrink}}</p>
-      </div>
-    </div>
+      <ng-container *cdkVirtualFor="let item of searchResults">
+        <h2 *ngIf="item.headline" class="content-headline">{{item.headline}}</h2>
+        <div
+          *ngIf="item.strDrinkThumb"
+          class="content-item fade-in">
+          <img [src]="item.strDrinkThumb" class="content-image" [alt]="item.strDrink">
+          <p class="content-info">{{item.strDrink}}</p>
+        </div>
+      </ng-container>
 
+    </cdk-virtual-scroll-viewport>
   </div>
+
 </section>

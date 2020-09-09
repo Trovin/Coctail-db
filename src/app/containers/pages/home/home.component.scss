@@ -1,5 +1,10 @@
 @import 'variables';
 
+:host {
+  width: 100%;
+  display: block;
+}
+
 .home {
   width: 100%;
   padding: 40px 50px;
@@ -14,6 +19,8 @@
 }
 
 .row {
+  height: 600px;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   margin-left: -42.5px;
@@ -26,12 +33,15 @@
 }
 
 .content-headline {
+  width: 100%;
   font-size: 24px;
   line-height: 28px;
   color: $item-headline;
   margin-bottom: 30px;
   padding-bottom: 10px;
   border-bottom: 1px solid #D0D0D0;
+  margin-left: 42.5px;
+  margin-right: 42.5px;
 }
 
 .content-image {

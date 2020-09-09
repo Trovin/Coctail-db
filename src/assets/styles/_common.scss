@@ -9,6 +9,11 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
+.cdk-virtual-scroll-orientation-vertical .cdk-virtual-scroll-content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .fade-in {
   animation: fadeIn $transition linear;
 }
